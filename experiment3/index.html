@@ -31,41 +31,35 @@
 			<h1>Experiment X - Subject/Topic</h1>
 			<div class="minor-section">
 				<h2>Imitate</h2>
-				<p>To develop artistic creativity in coding, it can be helpful to start by studying and learning from existing examples. This might involve reviewing code written by others, analyzing successful techniques, or even copying and modifying code to better understand how it works. By imitating and learning from existing techniques and strategies, we can gain a better understanding of what has been done before and what is possible, and identify opportunities for improvement and innovation.</p>
-				<p>What code did you start with? (You don't need to provide the code itself, but where did you start?) Document this step briefly.</p>
+				<p>After looking through Lecture 5's examples on generative methods, the sample on random walk stuck with me as an interesting concept to experiment with. I proceeded to look through its code and made adjustments for my understanding. The line drawn from random points relatively close from the previous made me think about if there can be a way to make more interesting visuals.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Integrate</h2>
-				<p>After learning from existing techniques and strategies, we can build upon that foundation by combining elements from different sources. This might involve combining elements from different programming languages, using libraries or frameworks in new ways, or bringing together techniques from different fields or disciplines. By integrating and combining elements from different sources, we can create something new and unique.</p>
-				<p>How did you extend the code or combine with another technique to make something new? Document this step.</p>
+				<p>After thinking more about how I can make something original with random walks, I was curious if I can have multiple random walks at the same time. Also, I wanted to see a different algorithm in making random walks, which I relied on ChatGPT with. After transferring this code and making adjustments to have two random walks occur at the same time, it gave me an idea that I can have more spawn overtime. Instead of having one created after a certain amount of time, another appears when a certain color-coded one draws over a different color. I was thinking that I need a way to store points in order to track if they have been jotted down, which ChatGPT helped me with.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Innovate</h2>
-				<p>Finally, we can introduce new or original ideas to our coding process by thinking creatively and pushing the boundaries. This might involve developing entirely new techniques or approaches, or using existing techniques in new and creative ways. By innovating and introducing new ideas, we can create art that is truly groundbreaking.</p>
-				<p>How did you use the code as a jumping off point to create something truly unique and novel? Document this step thoroughly.</p>
+				<p>To reach my idea, I had the random walk process be its own function and simply made another for the other (ie. randomWalk1() and randomWalk2()). I used ChatGPT's inclusion to the point tracker, as well. Then, I implemented another function called checkPoint() to indicate if a point has been already drawn by another random walk. It prints a message to notify that both random walks met, since I was testing it out. I included another random walk function to be spawned at the intersection point of the first two. In draw(), I included an “intersected” flag to start the new random walk if checkForIntersection() has spotted an intersection and to not call for that function again. Also, I adjusted the code to have the random walk be more random in their steps than what ChatGPT suggests. I polished my project to have less lines of code by having a dedicated function to create random walks instead of one for each walk. The doRandomWalk() function will assign the local variables to its respective x and y values, add a random value to each, creating a new vector of the new point and pushing it into the walk’s array, and drawing the vector onto the canvas. I included another random walk to be created based on green intersecting with red, but this time producing an orange color. I adjusted my code to use Math.round() on the random values to be more consistent in visualizing the intersection of random walks.	</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment. Here's where you can put your reflections.</p>
-				<ul>
-					<li>What part of the project you contributed</li>
-					<li>A reflection on your work and the work of the team</li>
-					<li>Brief highs and lows</li>
-				</ul>
+				<p>For this project, I contributed all of the work with the assistance of ChatGPT and the random walk algorithm from the Generative methods lecture. I first started with the algorithm from the lecture to try to understand how it works and how I can make something original out of it. ChatGPT’s interpretation of random walk was also an inspiration, and I would build off of this. I thought of my original idea, but was stuck on how I would implement it. The AI tool assisted me in finding an approach of saving points in order to compare other points to spawn another random walk by utilizing arrays. The rest of the process went more smoothly, especially after implementing the function for comparing points. More experimentation eventually led to more optimization and less lines of code.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Results</h2>
 				<div id="canvas-container">
 					<!-- canvas will be added here -->
+					<iframe src="https://editor.p5js.org/matt200122xd/full/Erjk62z8u"></iframe>
 				</div>
 			</div>
 		</section>
 		<nav id="links">
 			<!-- Put links to other pages (including the homepage) here. -->
+			<li>Generative Design Lecture: https://docs.google.com/presentation/d/1E1WQnbeBwL3DP_wSaXGxR-tQptDRuMtoh-ufG2WaQO0/edit?usp=sharing</li>
 		</nav>
 	</main>
 </body>
