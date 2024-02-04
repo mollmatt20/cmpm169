@@ -31,30 +31,22 @@
 			<h1>Experiment X - Subject/Topic</h1>
 			<div class="minor-section">
 				<h2>Imitate</h2>
-				<p>To develop artistic creativity in coding, it can be helpful to start by studying and learning from existing examples. This might involve reviewing code written by others, analyzing successful techniques, or even copying and modifying code to better understand how it works. By imitating and learning from existing techniques and strategies, we can gain a better understanding of what has been done before and what is possible, and identify opportunities for improvement and innovation.</p>
-				<p>What code did you start with? (You don't need to provide the code itself, but where did you start?) Document this step briefly.</p>
+				<p>After looking through the Generative Design website, I came across two examples that alter the pixels and their location of the image. As both programs are very similar to each other, I grew more of an understanding of how they operate. The image's pixels are being manipulated by set(x2, y2, get(x1, y1, w, h)); from x1,y1 to x2,y2 the pixel is moved and get() receives the info of that pixel in rectangular form. The second example, to me, is more helpful for me to understand since I can see more of the pixels in rectangular regions being placed elsewhere from their original position.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Integrate</h2>
-				<p>After learning from existing techniques and strategies, we can build upon that foundation by combining elements from different sources. This might involve combining elements from different programming languages, using libraries or frameworks in new ways, or bringing together techniques from different fields or disciplines. By integrating and combining elements from different sources, we can create something new and unique.</p>
-				<p>How did you extend the code or combine with another technique to make something new? Document this step.</p>
+				<p>After making a copy with one of the examples, I thought of experimenting with a mouse pressing interaction. Wherever you press on the image, that coordinate pressed will have its pixel be manipulated, basically the original example but function occurring where you pressed instead of the whole piece all at once. I transferred the contents of draw() to mousePressed() with some alterations. By curiosity, I changed the new location of where to place the pixels further down on the canvas and it gave the results of the image looking like it’s melting whenever you click on it. I thought about how I can make this melting effect a bit more natural and less tedious, since you had to click on the image for it to happen. ChatGPT gave me the suggestion of using a boolean flag where the effect will occur when I click on the image and stop as I do it again. It’s like an on and off switch that saves me less clicks than before. The results were more drastic as I realized that the program will keep on drawing wherever the mouse is until you pressed it again. I was also able to upload my own files into the workspace, so I can utilize other images than the original example.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Innovate</h2>
-				<p>Finally, we can introduce new or original ideas to our coding process by thinking creatively and pushing the boundaries. This might involve developing entirely new techniques or approaches, or using existing techniques in new and creative ways. By innovating and introducing new ideas, we can create art that is truly groundbreaking.</p>
-				<p>How did you use the code as a jumping off point to create something truly unique and novel? Document this step thoroughly.</p>
+				<p>As I continued to use this melting painting concept, the main image I chose is Salvador Ali’s Persistence of Memories (1931) as it visually fits. To add more depth to this theme, I plan to include some unsettling music to represent something recognizable melts into something unrecognizable. On freesound.org, I stumbled on this track: https://freesound.org/people/mrpogofficial/sounds/721107/. I implemented the sound looping to have it continue, and have it play when the user is drawing but it pauses when they stop.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment. Here's where you can put your reflections.</p>
-				<ul>
-					<li>What part of the project you contributed</li>
-					<li>A reflection on your work and the work of the team</li>
-					<li>Brief highs and lows</li>
-				</ul>
+				<p>I worked on this project with myself and assistance with examples as referenced earlier. I felt like my work reflects most with the examples I based it on, but with my own beliefs of what I can create from it. The manipulation of pixels to make it as if the user is melting down the image feels intriguing of what it will look like after some time and has an interactive element to it. The difficult part was finding out how I can implement sound into my piece, but all I needed was to base it off of what sound is appropriate in this case. Making the mood eerie was what made sense to me. This experiment was a fun one to incorporate different forms of media into a single piece.</p>
 			</div>
 
 			<div class="minor-section">
@@ -66,6 +58,9 @@
 		</section>
 		<nav id="links">
 			<!-- Put links to other pages (including the homepage) here. -->
+			<li>http://www.generative-gestaltung.de/2/sketches/?01_P/P_4_1_2_01</li>
+			<li>http://www.generative-gestaltung.de/2/sketches/?01_P/P_4_1_2_02</li>
+			<li>https://freesound.org/people/mrpogofficial/sounds/721107/</li>
 		</nav>
 	</main>
 </body>
