@@ -2,21 +2,26 @@ let width = 800;
 let height = 800;
 let teapots = [];
 let positions = [];
+let video;
+let videoTexture;
 
 function preload() {
   for(let i = 0; i < 5; i++) {
     teapots[i] = loadModel('assets/teapot.obj');
   }
-  sky = loadImage('assets/sky.jpg');
 }
 
 function setup() {
   canvas = createCanvas(width, height, WEBGL);
-  positions.push(createVector(-15, -15));
-  positions.push(createVector(12, 6));
-  positions.push(createVector(12, -15));
-  positions.push(createVector(-15, 6));
-  positions.push(createVector(-1, -5));
+  video = createVideo('assets/TeaCommercial.mp4')
+  video.size(width, height);
+  video.loop();
+  video.hide();
+  positions.push(createVector(-16, -15));
+  positions.push(createVector(10, 6));
+  positions.push(createVector(10, -15));
+  positions.push(createVector(-16, 6));
+  positions.push(createVector(-2, -5));
 }
 
 function draw() {
@@ -25,14 +30,10 @@ function draw() {
   ambientLight(255);
   
   // Set the background color
-  background(0);
+  background(255);
   
   push();
-  noStroke();
-  translate(0,0,-500);
-  texture(sky);
-  scale(1.5);
-  plane(width * 1.2, height * 1.2);
+  texture(video);
   pop();
   
   scale(20);
@@ -40,8 +41,13 @@ function draw() {
   for(let i = 0; i < teapots.length; i++) {
     push();
     translate(positions[i]);
+    rotateX(frameCount * 0.1);
+    rotateY(frameCount * 0.1);
     rotateZ(frameCount * 0.1);
+    noStroke();
+    ambientMaterial(73,121,116);
     model(teapots[i]);
     pop();
   }
+  
 }
