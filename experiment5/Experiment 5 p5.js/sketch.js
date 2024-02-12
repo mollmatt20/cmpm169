@@ -3,7 +3,6 @@ let height = 800;
 let teapots = [];
 let positions = [];
 let video;
-let videoTexture;
 
 function preload() {
   for(let i = 0; i < 5; i++) {
